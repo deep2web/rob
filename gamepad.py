@@ -48,8 +48,8 @@ while True:
 def t_pressed(side, axis):
     while True:
         if pygame.joystick.Joystick(0).get_axis(axis) > 0: #LT
-            print(side, "T", "gedrückt")
-            print("pressed")
+            print(side, "T", "pressed")
+            return side
         time.sleep(0.05)
 
 t1 = threading.Thread(target=t_pressed, args=("L", 2))
